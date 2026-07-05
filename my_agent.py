@@ -21,18 +21,18 @@ st.markdown("""
     <style>
     .main { background-color: #0B0F19; color: #FFFFFF; }
     .stButton>button {
-        background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-        color: white;
-        border-radius: 8px;
-        padding: 12px 24px;
-        font-weight: bold;
-        border: none;
-        width: 100%;
-        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%) !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: bold !important;
+        border: none !important;
+        width: 100% !important;
+        transition: all 0.3s ease !important;
     }
     .stButton>button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4) !important;
     }
     .report-box {
         background-color: #1E293B;
@@ -57,7 +57,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("Developed with ❤️ by **Bright Digital**")
 
-# 🏛️ मुख्य पेज का डिजाइन (2 Columns Layout)
+# 🏛️ मुख्य पेज का डिजाइन (2 Columns Layout - [1, 1] अनुपात में)
 col1, col2 = st.columns([1, 1], gap="large")
 
 with col1:
@@ -65,7 +65,7 @@ with col1:
     st.write("अपनी रील या शॉर्ट्स अपलोड करें। हमारा एडवांस एआई वीडियो को खुद स्कैन करके सबसे बेस्ट वायरल कंटेंट तैयार करेगा।")
     
     # अपलोडर बॉक्स
-    uploaded_file = st.file_uploader("यहाँ अपनी वीडियो फाइल (MP4) अपलोड करें", type=["mp4", "mov", "avi"])
+    uploaded_file = st.file_uploader("यहाँ अपनी video फाइल (MP4) अपलोड करें", type=["mp4", "mov", "avi"])
     
     if uploaded_file is not None:
         st.video(uploaded_file)
@@ -90,7 +90,7 @@ with col2:
                     इसके आधार पर निम्नलिखित चीजें सुंदर पॉइंट्स में तैयार करो:
                     1. 🔥 3 धमाकेदार टाइटल्स (YouTube Shorts के लिए)।
                     2. 📝 1 सस्पेंस से भरा हुआ इंस्टाग्राम रील्स कैप्शन (हिंदी-इंग्लिश मिक्स भाषा में)।
-                    3. 🚀 टॉप 10 वायरल होने वाले हैशटैग्स (#)।
+                    3. 🚀 टॉप 10 वायरल होने वाले हैशटैगส์ (#)।
                     """
                     
                     response = model.generate_content([video_file, prompt])
