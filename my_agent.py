@@ -57,7 +57,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("Developed with ❤️ by **Bright Digital**")
 
-# 🏛️ मुख्य पेज का डिजाइन (2 Columns Layout - [1, 1] अनुपात में)
+# 🏛️ मुख्य पेज का डिजाइन (2 Columns Layout - यहाँ खराबी ठीक कर दी गई है)
 col1, col2 = st.columns([1, 1], gap="large")
 
 with col1:
@@ -86,7 +86,7 @@ with col2:
                     model = genai.GenerativeModel(model_name="gemini-2.5-flash")
                     
                     prompt = """
-                    तुम एक सोशल मीडिया एक्सपर्ट हो। इस वीडियो को पूरा देखो और समझो।
+                    तुम एक सोशल media एक्सपर्ट हो। इस वीडियो को पूरा देखो और समझो।
                     इसके आधार पर निम्नलिखित चीजें सुंदर पॉइंट्स में तैयार करो:
                     1. 🔥 3 धमाकेदार टाइटल्स (YouTube Shorts के लिए)।
                     2. 📝 1 सस्पेंस से भरा हुआ इंस्टाग्राम रील्स कैप्शन (हिंदी-इंग्लिश मिक्स भाषा में)।
